@@ -53,7 +53,7 @@ def simplify_summands(summands, vars_dictionary):
 
 dict_vars = {}
 while True:
-    user_input = input().strip()  # write your code here
+    user_input = input().strip()
     if len(user_input):
         if user_input.startswith('/'):
             exit_flag = calc_commands(user_input[1:])
@@ -67,8 +67,6 @@ while True:
             except KeyError:
                 print("Unknown variable")
         else:
-            # print(sum([int(i) for i in summands]))
-            # print(sum(simplify_summands(user_input)))
             try:
                 print(sum(simplify_summands(user_input.split(), dict_vars)))
             except TypeError:
