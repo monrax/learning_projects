@@ -26,7 +26,7 @@ def print_field(cells):
 
 
 def is_unfinished(cells):
-    return '_' in cells
+    return ' ' in cells
 
 
 def is_impossible(cells):
