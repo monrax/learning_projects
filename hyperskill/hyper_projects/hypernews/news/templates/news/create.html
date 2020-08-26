@@ -1,0 +1,15 @@
+{% extends "news/base.html" %}
+{% block content %}
+<form action="/news/create/" method="post">
+    {% csrf_token %}
+    <label for="input-title">Title:</label>
+    <input id="input-title" type="text" name="title"><br>
+    <br>
+    <label for="input-text">Text:</label>
+    <textarea id="input-text" name="text" rows="10" cols="30"></textarea><br>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+<br>
+<a target="_blank" href="/news/">return to main page</a>
+{% endblock %}
