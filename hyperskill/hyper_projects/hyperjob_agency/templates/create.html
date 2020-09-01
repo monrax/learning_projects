@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post">{% csrf_token %}
+  <label for="input-text">Enter description:</label><br>
+  <textarea id="input-text" name="description" rows="10" cols="30"></textarea><br>
+  <button type="submit">Submit {{ type }}</button>
+</form>
+{% endblock %}
